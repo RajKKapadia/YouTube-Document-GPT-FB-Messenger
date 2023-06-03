@@ -36,7 +36,7 @@ def facebook_messenger():
         body = request.get_json()
         sender_id = body['entry'][0]['messaging'][0]['sender']['id']
         query = body['entry'][0]['messaging'][0]['message']['text']
-
+        print(sender_id, query)
         # TODO
         # get the user
         # if not create
@@ -47,7 +47,7 @@ def facebook_messenger():
             'chat_history': {}
             }
         )
-
+        print(res)
         # TODO
         # send message
         send_message(sender_id, res['answer'])

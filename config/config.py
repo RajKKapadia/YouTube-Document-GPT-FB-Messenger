@@ -1,7 +1,7 @@
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 FB_AUTH_TOKEN = os.getenv('FB_AUTH_TOKEN')
